@@ -4,7 +4,7 @@ const app = express();
 const PORT = 5000;
 const cors = require("cors");
 app.use(cors({
-  origin: 'https://package-pilot-kfdjsuxi8-alexs-projects-33383354.vercel.app/',
+  origin: 'https://package-pilot-ai.vercel.app/',
 
 }));
 
