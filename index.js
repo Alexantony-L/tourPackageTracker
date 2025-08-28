@@ -4,9 +4,8 @@ const app = express();
 const PORT = 5000;
 const cors = require("cors");
 app.use(cors({
-  origin: 'https://package-pilot-isvkwsyn5-alexs-projects-33383354.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true
+  origin: 'https://package-pilot-kfdjsuxi8-alexs-projects-33383354.vercel.app/',
+
 }));
 
 app.use(express.json());
