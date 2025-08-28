@@ -3,9 +3,15 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 const cors = require("cors");
+const allowedOrigins = ['https://package-pilot-ai.vercel.app'];
 app.use(cors({
-  origin: 'https://package-pilot-ai.vercel.app/',
-
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }));
 
 app.use(express.json());
