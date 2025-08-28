@@ -3,7 +3,12 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 const cors = require("cors");
-app.use(cors());
+app.use(cors({
+  origin: 'https://package-pilot-isvkwsyn5-alexs-projects-33383354.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
+
 app.use(express.json());
 const { promptFormater } = require("./src/utl/prompt");
 
