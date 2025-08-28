@@ -7,6 +7,10 @@ app.use(cors());
 app.use(express.json());
 const { promptFormater } = require("./src/utl/prompt");
 
+app.get("/",async (req, res) => {
+  res.send("Travel guide API is running");  
+});
+
 app.post("/api/travel-guide", async (req, res) => {
   const prompt = await promptFormater(req.body);
 
