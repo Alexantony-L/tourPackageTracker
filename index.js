@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 const cors = require("cors");
-const allowedOrigins = ['https://package-pilot-ai.vercel.app','http://localhost:8081'];
+const allowedOrigins = ['https://package-pilot-ai.vercel.app','http://10.227.209.32:8081'];
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
